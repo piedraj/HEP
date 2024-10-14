@@ -1,4 +1,4 @@
-# The source is https://github.com/latinos/PlotsConfigurationsRun3/tree/main/ControlRegions/SS/Full2018_v9
+# Cloned from https://github.com/latinos/PlotsConfigurationsRun3/tree/main/ControlRegions/SS/Full2018_v9
 
 import os,glob
 
