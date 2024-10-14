@@ -60,9 +60,11 @@ Everytime you start a new session you need to follow these steps.
     bash -l
     cd mkShapesRDF
     source start.sh
+
+Currently the analysis can be performed on **v7** or **v9** samples. To choose one set simply go to the corresponding folder.
     
-    cd TFG/Full2018_v7/  # The analysis will be performed with v7 samples
-    cd TFG/Full2018_v9/  # The analysis will be performed with v9 samples
+    cd TFG/Full2018_v7/
+    cd TFG/Full2018_v9/
 
 <!---
 *Only necessary if Grid access is needed.* Produce a valid VOMS proxy.
