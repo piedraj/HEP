@@ -8,7 +8,7 @@ It's the only necessary python configuration file, all the other files are impor
 treeName = 'Events'
 
 #: tag used to identify the configuration folder version
-tag = 'darkHiggs2018_v7'
+tag = 'TFG'
 
 #: file to use as runner script, default uses mkShapesRDF.shapeAnalysis.runner, otherwise specify path to script
 runnerFile = "default"
