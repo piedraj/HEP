@@ -101,10 +101,7 @@ If you need to cancel all the submitted jobs.
 
 # 6. Plot the analysis histograms
 
-    mkPlot --inputFile rootFiles__v7/mkShapes__v7.root \
-           --showIntegralLegend 1 \
-           --onlyPlot cratio \
-           --fileFormats png
+    mkPlot --showIntegralLegend 1 --onlyPlot cratio --fileFormats png
 
 If needed, the available arguments can be printed.
 
