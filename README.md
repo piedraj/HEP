@@ -51,7 +51,7 @@ The script `start.sh` has to be run everytime to activate the environment.
 Get the analysis configuration.
 
     git clone https://github.com/piedraj/TFG
-    cd TFG/Full2018_v7
+    cd TFG/Full2018_v7/
 
 # 3. Always do
 
@@ -98,7 +98,7 @@ If you need to cancel all the submitted jobs.
 
 # 6. Plot the analysis histograms
 
-    mkPlot --inputFile rootFiles__TFG/mkShapes__TFG.root \
+    mkPlot --inputFile rootFiles__v7/mkShapes__v7.root \
            --showIntegralLegend 1 \
            --onlyPlot cratio \
            --fileFormats png
