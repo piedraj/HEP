@@ -16,7 +16,7 @@ runnerFile = "default"
 outputFile = "mkShapes__{}.root".format(tag)
 
 # Path to ouput folder
-outputFolder  = "rootFiles__{}".format(tag)
+outputFolder  = "rootfiles__{}".format(tag)
 
 # Path to batch folder (used for condor submission)
 batchFolder = "condor"
@@ -51,7 +51,7 @@ structureFile = "structure.py"
 nuisancesFile = "nuisances.py"
 
 # Path to folder where to save plots
-plotPath = 'plots_' + tag
+plotPath = "plots__{}".format(tag)
 
 # This lines are executed right before the runner on the condor node
 mountEOS = []
