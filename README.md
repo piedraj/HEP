@@ -51,7 +51,6 @@ The script `start.sh` has to be run everytime to activate the environment.
 Get the analysis configuration.
 
     git clone https://github.com/piedraj/TFG
-    cd TFG/Full2018_v7/
 
 # 3. Always do
 
