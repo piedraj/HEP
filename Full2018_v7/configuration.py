@@ -17,7 +17,7 @@ runnerFile = "default"
 outputFile = "mkShapes__{}.root".format(tag)
 
 #: path to ouput folder
-outputFolder  = "rootFiles__{}".format(tag)
+outputFolder  = "rootfiles__{}".format(tag)
 
 
 #: path to batch folder (used for condor submission)
@@ -59,7 +59,7 @@ nuisancesFile = 'nuisances.py'
 
 
 #: path to folder where to save plots
-plotPath = "plots"
+plotPath = "plots__{}".format(tag)
 
 
 #: list of imports to import when compiling the whole configuration folder, it should not contain imports used by configuration.py
