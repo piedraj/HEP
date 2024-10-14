@@ -56,7 +56,7 @@ Get the analysis configuration.
 
 Everytime you start a new session you need to follow these steps.
 
-    ssh -Y -l <username> lxplus9.cern.ch -o ServerAliveInterval=240
+    ssh -Y -l <username> lxplus.cern.ch -o ServerAliveInterval=240
     bash -l
     cd mkShapesRDF
     source start.sh
