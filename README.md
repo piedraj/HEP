@@ -1,3 +1,5 @@
+Authors: Sergio Blanco, Alicia Calderón, Jónatan Piedra, Jesús Vizán.
+
 # 0. Documentation
 
 * [mkShapesRDF](https://mkshapesrdf.readthedocs.io/en/latest/)
