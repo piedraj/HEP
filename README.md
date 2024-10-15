@@ -103,4 +103,4 @@ If needed, the available arguments can be printed.
 
     mkPlot --help
 
-When running on batch check that you have produced these [default distributions](https://piedra.web.cern.ch/plots-v7/).
+When running on batch check that you have produced these [v7](https://piedra.web.cern.ch/plots-v7/) or [v9](https://piedra.web.cern.ch/plots-v9/) default distributions.
