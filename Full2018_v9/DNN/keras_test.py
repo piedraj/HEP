@@ -21,177 +21,64 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_curve, auc
 
 
-#DATA LOAD#
+# Data load
 
-VARS = ['mjj','mll','ptll','detajj', 'dphill', 'PuppiMET_pt', 'mTi', 'dphillmet', 'drll', 'ht', 'mth','Lepton_pt[0]', 'Lepton_pt[1]', 'Lepton_eta[0]', 'Lepton_eta[1]', 'CleanJet_pt[0]', 'CleanJet_pt[1]', 'CleanJet_eta[0]', 'CleanJet_eta[1]', 'mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])','mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])','mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])','mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])', 'log((abs(2*Lepton_eta[0]-CleanJet_eta[0]-CleanJet_eta[1])+abs(2*Lepton_eta[1]-CleanJet_eta[0]-CleanJet_eta[1]))/detajj)']
-
+VARS = ['mjj', 'mll', 'ptll', 'detajj', 'dphill', 'PuppiMET_pt', 'Lepton_pt[0]', 'Lepton_pt[1]', 'CleanJet_pt[0]', 'CleanJet_pt[1]']
 
 NDIM = len(VARS)+2
-'''
-df = {}
 
 dataset_vbf = load_dataset_vbf ( max_entries=-1 ) 
 dataset_top = load_dataset_top ( max_entries=-1 ) 
-dataset_ww = load_dataset_ww ( max_entries=-1 ) 
+dataset_ww  = load_dataset_ww  ( max_entries=-1 ) 
 dataset_ggh = load_dataset_ggh ( max_entries=-1 ) 
 
+df = {}
 
-jetidx0_vbf = dataset_vbf ["CleanJet_jetIdx[0]"]
-jetidx1_vbf = dataset_vbf ["CleanJet_jetIdx[1]"]
-jetqgl_vbf = dataset_vbf ["Jet_qgl"]
+df['vbf'] = pd.DataFrame(dataset_vbf, columns=VARS)
+df['top'] = pd.DataFrame(dataset_top, columns=VARS)
+df['ww' ] = pd.DataFrame(dataset_ww,  columns=VARS)
+df['ggh'] = pd.DataFrame(dataset_ggh, columns=VARS)
 
-jetqgl0_vbf = []
-jetqgl1_vbf = [] 
-
-jetidx0_top = dataset_top ["CleanJet_jetIdx[0]"]
-jetidx1_top = dataset_top ["CleanJet_jetIdx[1]"]
-jetqgl_top = dataset_top ["Jet_qgl"]
-
-jetqgl0_top = []
-jetqgl1_top = [] 
-
-jetidx0_ww = dataset_ww ["CleanJet_jetIdx[0]"]
-jetidx1_ww = dataset_ww ["CleanJet_jetIdx[1]"]
-jetqgl_ww = dataset_ww ["Jet_qgl"]
-
-jetqgl0_ww = []
-jetqgl1_ww = [] 
-
-jetidx0_ggh = dataset_ggh ["CleanJet_jetIdx[0]"]
-jetidx1_ggh = dataset_ggh ["CleanJet_jetIdx[1]"]
-jetqgl_ggh = dataset_ggh ["Jet_qgl"]
-
-jetqgl0_ggh = []
-jetqgl1_ggh = [] 
-
-
-print (len(jetqgl_vbf))
-print (len(jetqgl_top))
-print (len(jetqgl_ww))
-print (len(jetqgl_ggh))
-
-for i in range (0,len(jetqgl_vbf)):
-        if not len(jetidx0_vbf[i]) == 0:
-                jetqgl0_vbf.append(jetqgl_vbf[i][jetidx0_vbf[i][0]])
-        else:   
-                jetqgl0_vbf.append(-1)
-        if not len(jetidx1_vbf[i]) == 0:
-                jetqgl1_vbf.append(jetqgl_vbf[i][jetidx1_vbf[i][0]])
-        else:
-                jetqgl1_vbf.append(-1)
-                
-
-for i in range (0,len(jetqgl_top)):
-        if not len(jetidx0_top[i]) == 0:
-                jetqgl0_top.append(jetqgl_top[i][jetidx0_top[i][0]])
-        else:
-                jetqgl0_top.append(-1)
-        if not len(jetidx1_top[i]) == 0:
-                jetqgl1_top.append(jetqgl_top[i][jetidx1_top[i][0]])
-        else:
-                jetqgl1_top.append(-1)
-
-for i in range (0,len(jetqgl_ww)):
-        if not len(jetidx0_ww[i]) == 0:
-                jetqgl0_ww.append(jetqgl_ww[i][jetidx0_ww[i][0]])
-        else:   
-                jetqgl0_ww.append(-1)
-        if not len(jetidx1_ww[i]) == 0:
-                jetqgl1_ww.append(jetqgl_ww[i][jetidx1_ww[i][0]])
-        else:
-                jetqgl1_ww.append(-1)
-
-for i in range (0,len(jetqgl_ggh)):
-        if not len(jetidx0_ggh[i]) == 0:
-                jetqgl0_ggh.append(jetqgl_ggh[i][jetidx0_ggh[i][0]])
-        else:   
-                jetqgl0_ggh.append(-1)
-        if not len(jetidx1_ggh[i]) == 0:
-                jetqgl1_ggh.append(jetqgl_ggh[i][jetidx1_ggh[i][0]])
-        else:
-                jetqgl1_ggh.append(-1)
-
-
-del dataset_vbf["CleanJet_jetIdx[0]"]
-del dataset_vbf["CleanJet_jetIdx[1]"]
-del dataset_vbf["Jet_qgl"]
-
-del dataset_top["CleanJet_jetIdx[0]"]
-del dataset_top["CleanJet_jetIdx[1]"]
-del dataset_top["Jet_qgl"]
-
-del dataset_ww["CleanJet_jetIdx[0]"]
-del dataset_ww["CleanJet_jetIdx[1]"]
-del dataset_ww["Jet_qgl"]
-
-del dataset_ggh["CleanJet_jetIdx[0]"]
-del dataset_ggh["CleanJet_jetIdx[1]"]
-del dataset_ggh["Jet_qgl"]
-
-
-df['vbf'] = pd.DataFrame(dataset_vbf,columns=VARS)
-df['top'] = pd.DataFrame(dataset_top,columns=VARS)
-df['ww'] = pd.DataFrame(dataset_ww,columns=VARS)
-df['ggh'] = pd.DataFrame(dataset_ggh,columns=VARS)
-
-df['vbf']['jetqgl[0]']= np.asarray(jetqgl0_vbf)
-df['vbf']['jetqgl[1]']= np.asarray(jetqgl1_vbf)
-
-df['top']['jetqgl[0]']= np.asarray(jetqgl0_top)
-df['top']['jetqgl[1]']= np.asarray(jetqgl1_top)
-
-df['ww']['jetqgl[0]']= np.asarray(jetqgl0_ww)
-df['ww']['jetqgl[1]']= np.asarray(jetqgl1_ww)
-
-df['ggh']['jetqgl[0]']= np.asarray(jetqgl0_ggh)
-df['ggh']['jetqgl[1]']= np.asarray(jetqgl1_ggh)
-
-
-df['vbf']['isVBF'] = np.ones(len(df['vbf']))
+df['vbf']['isVBF'] = np.ones (len(df['vbf']))
 df['top']['isVBF'] = np.zeros(len(df['top']))
-df['ww']['isVBF'] = np.zeros(len(df['ww']))
+df['ww' ]['isVBF'] = np.zeros(len(df['ww' ]))
 df['ggh']['isVBF'] = np.zeros(len(df['ggh']))
 
 df['vbf']['isTOP'] = np.zeros(len(df['vbf']))
-df['top']['isTOP'] = np.ones(len(df['top']))
-df['ww']['isTOP'] = np.zeros(len(df['ww']))
+df['top']['isTOP'] = np.ones (len(df['top']))
+df['ww' ]['isTOP'] = np.zeros(len(df['ww' ]))
 df['ggh']['isTOP'] = np.zeros(len(df['ggh']))
 
 df['vbf']['isWW'] = np.zeros(len(df['vbf']))
 df['top']['isWW'] = np.zeros(len(df['top']))
-df['ww']['isWW'] = np.ones(len(df['ww']))
+df['ww' ]['isWW'] = np.ones (len(df['ww' ]))
 df['ggh']['isWW'] = np.zeros(len(df['ggh']))
 
 df['vbf']['isGGH'] = np.zeros(len(df['vbf']))
 df['top']['isGGH'] = np.zeros(len(df['top']))
-df['ww']['isGGH'] = np.zeros(len(df['ww']))
-df['ggh']['isGGH'] = np.ones(len(df['ggh']))
-
+df['ww' ]['isGGH'] = np.zeros(len(df['ww' ]))
+df['ggh']['isGGH'] = np.ones (len(df['ggh']))
 
 df_all = pd.concat([df['vbf'],df['top'],df['ww'],df['ggh']])
 
-
 df_all.to_pickle("dataset_quad.pkl")
-'''
 
-df_all=pd.read_pickle("dataset_quad.pkl")
-df_all.dropna(inplace=True)
+# J.Piedra # df_all = pd.read_pickle("dataset_quad.pkl")
+# J.Piedra # df_all.dropna(inplace=True)
+# J.Piedra # 
+# J.Piedra # if (df_all.isnull().values.any()):
+# J.Piedra #     print("NAN")
 
-if(df_all.isnull().values.any()):
-    print("NAN!!!!")
-
-'''
-
-pd.set_option('display.max_rows', 200000)
-pd.set_option('display.max_columns', 30)
-pd.set_option('display.width', 1000)
-
-
-
-with open('dataset.txt', 'w') as f:
-        print(df_all, file=f)
 
 '''
+pd.set_option('display.max_rows',    200000)
+pd.set_option('display.max_columns',     30)
+pd.set_option('display.width',         1000)
+
+with open('dataset.txt', 'w') as f : print(df_all, file=f)
+
+'''
+
 dataset = df_all.values
 X = dataset[:,0:NDIM]
 Y = dataset[:,NDIM:NDIM+4]
