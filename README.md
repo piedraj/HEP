@@ -86,6 +86,7 @@ Always proceed as follows:
 2. **Compile.** If you miss this step the implemented changes won't be considered when running the code.
 3. **Run on local.** This is a very important step, as it allows you to check if any error has been introduced with the latest modifications.
 4. **Run on batch.**
+5. **Merge root files.**
 
 # 5. Check job status
 
