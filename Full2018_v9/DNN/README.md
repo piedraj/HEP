@@ -20,6 +20,7 @@ Initialize a CMSSW release.
 
     unset SCRAM_ARCH
     cmsrel CMSSW_10_6_0
+    cmsenv
 
 Get the necessary files to run the DNN.
 
