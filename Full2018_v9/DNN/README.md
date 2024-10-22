@@ -14,6 +14,7 @@ The code has to be run with an el7 image. Follow the [El7 image with condor supp
 
 Initialize a CMSSW release.
 
+    unset SCRAM_ARCH
     cmsrel CMSSW_10_6_0
 
 Get the necessary files to run the DNN.
