@@ -28,8 +28,8 @@ Get the necessary files to run the DNN.
     mkdir $CMSSW_BASE/src/DNN
     cd $CMSSW_BASE/src/DNN
     
-    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/loader.py
-    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/keras_test.py
+    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/DNN/loader.py
+    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/DNN/keras_test.py
 
 # 2. Always do
 
