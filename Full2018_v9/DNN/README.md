@@ -20,12 +20,14 @@ Initialize a CMSSW release.
 
     unset SCRAM_ARCH
     cmsrel CMSSW_10_6_0
+    cd CMSSW_10_6_0/src
     cmsenv
 
 Get the necessary files to run the DNN.
 
-    mkdir CMSSW_10_6_0/src/DNN
-    cd CMSSW_10_6_0/src/DNN
+    cd $CMSSW_BASE/src
+    mkdir DNN
+    cd DNN
     
     wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/loader.py
     wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/keras_test.py
