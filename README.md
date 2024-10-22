@@ -8,7 +8,7 @@
 * [SWAN](https://swan.cern.ch/)
 * [Monte Carlo particle numbering scheme](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-monte-carlo-numbering.pdf)
 
-# 1. Everything begins here
+# 1. Installation
 
 Log in to the CERN LXPLUS cluster.
 
@@ -17,8 +17,6 @@ Log in to the CERN LXPLUS cluster.
 Switch to a [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) shell.
     
     bash -l
-
-# 2. Installation
 
 Clone the project.
 
@@ -48,7 +46,7 @@ Get the analysis configuration.
 
     git clone https://github.com/piedraj/TFG
 
-# 3. Always do
+# 2. Always do
 
 Everytime you start a new session you need to follow these steps.
 
@@ -68,7 +66,7 @@ Currently the analysis can be performed on `v7` or `v9` samples. To choose one s
     voms-proxy-init -voms cms -rfc --valid 168:0
 -->
 
-# 4. Produce the analysis histograms
+# 3. Produce the analysis histograms
 
 | Action                        | Command                                                                 |
 |:------------------------------|:------------------------------------------------------------------------|
@@ -88,7 +86,7 @@ Always proceed as follows:
 4. **Run on batch.**
 5. **Merge root files.**
 
-# 5. Check job status
+# 4. Check job status
 
     condor_q
 
@@ -96,7 +94,7 @@ If you need to cancel all the submitted jobs.
 
     condor_rm <username>
 
-# 6. Plot the analysis histograms
+# 5. Plot the analysis histograms
 
     mkPlot --showIntegralLegend 1 --onlyPlot cratio --fileFormats png
 
@@ -106,7 +104,7 @@ If needed, the available arguments can be printed.
 
 When running on batch check that you have produced these [v7](https://piedra.web.cern.ch/plots-v7/) or [v9](https://piedra.web.cern.ch/plots-v9/) default distributions.
 
-# 7. Share on the web
+# 6. Share on the web
 
 Once the analysis plots have been produced, the best way to look at them is by [creating a webEOS site](https://webeos.docs.cern.ch/create_site/).
 
