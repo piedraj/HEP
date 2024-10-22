@@ -18,11 +18,12 @@ Initialize a CMSSW release.
     cmsrel CMSSW_10_6_0
 
 Get the necessary files to run the DNN.
+
+    mkdir CMSSW_10_6_0/src/DNN
+    cd CMSSW_10_6_0/src/DNN
     
-    cd CMSSW_10_6_0/src/
-    
-    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/loader.py .
-    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/keras_test.py .
+    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/loader.py
+    wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/keras_test.py
 
 # 2. Always do
 
