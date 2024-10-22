@@ -42,11 +42,8 @@ Everytime you start a new session you need to follow these steps.
 Current output.
 
 ```
-Using TensorFlow backend.
-/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-requests/2.21.0-pafccj2/lib/python2.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.25.2) or chardet (3.0.4) doesn't match a supported version!
-  RequestsDependencyWarning)
 1771846
-34766506
+4517174
 1767596
 1424739
 _________________________________________________________________
