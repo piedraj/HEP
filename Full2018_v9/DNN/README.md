@@ -8,7 +8,7 @@ Log in to the CERN LXPLUS cluster.
 
     ssh -Y -l <user> lxplus.cern.ch -o ServerAliveInterval=240
 
-The code has to be run with an el7 image. Follow the [El7 image with condor support for lxplus](https://gitlab.cern.ch/cms-cat/cmssw-lxplus/) instructions to create a `start_el7.sh` script. The next step is making it executable.
+The code has to be run with an el7 image. Follow the [El7 image with condor support for lxplus](https://gitlab.cern.ch/cms-cat/cmssw-lxplus/) instructions to create a `start_el7.sh` script, and then make it executable.
 
     chmod u+x start_el7.sh
 
