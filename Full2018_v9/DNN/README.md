@@ -25,9 +25,8 @@ Initialize a CMSSW release.
 
 Get the necessary files to run the DNN.
 
-    cd $CMSSW_BASE/src
-    mkdir DNN
-    cd DNN
+    mkdir $CMSSW_BASE/src/DNN
+    cd $CMSSW_BASE/src/DNN
     
     wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/loader.py
     wget https://raw.githubusercontent.com/piedraj/TFG/refs/heads/main/Full2018_v9/DNN/keras_test.py
