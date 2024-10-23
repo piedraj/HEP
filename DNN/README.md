@@ -51,13 +51,13 @@ Current output.
 
 ```
 1771846
-4517174
+1526781
 1767596
 1424739
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #
 =================================================================
-dense_1 (Dense)              (None, 240)               3120
+dense_1 (Dense)              (None, 240)               5280
 _________________________________________________________________
 dropout_1 (Dropout)          (None, 240)               0
 _________________________________________________________________
@@ -71,12 +71,12 @@ dropout_3 (Dropout)          (None, 60)                0
 _________________________________________________________________
 dense_4 (Dense)              (None, 4)                 244
 =================================================================
-Total params: 39,544
-Trainable params: 39,544
+Total params: 41,704
+Trainable params: 41,704
 Non-trainable params: 0
 _________________________________________________________________
 Traceback (most recent call last):
-  File "keras_test.py", line 122, in <module>
+  File "keras_test.py", line 123, in <module>
     validation_split=0.25)
   File "/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-Keras/2.2.4-pafccj2/lib/python2.7/site-packages/keras/engine/training.py", line 952, in fit
     batch_size=batch_size)
