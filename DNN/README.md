@@ -1,6 +1,6 @@
-# 0. Documentation
-
 Deep neural network (DNN) that reads `v9` Monte Carlo files to separate the VBF, top, WW, and ggH processes.
+
+# 0. Documentation
 
 * [The Keras Sequential model](https://keras.io/guides/sequential_model/)
 
