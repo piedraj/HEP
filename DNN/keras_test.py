@@ -27,7 +27,6 @@ from sklearn.metrics import roc_curve, auc
 
 VARS = [ "mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
 
-#NDIM = len(VARS)+2
 NDIM = len(VARS)
 
 dataset_vbf = load_dataset_vbf ( max_entries=-1 ) 
