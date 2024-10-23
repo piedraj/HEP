@@ -53,7 +53,7 @@ def load_dataset_top (max_entries = -1) :
 
   chain = ROOT.TChain('Events')
 
-  for i in range(0,15,1) : # Up to 15 (of 154)
+  for i in range(0,10,1) : # Up to 10 (of 154)
     chain.Add(dir18+'nanoLatino_TTTo2L2Nu__part' + str(i) + '.root')
   
   print chain.GetEntries()
