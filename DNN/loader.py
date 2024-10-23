@@ -12,14 +12,7 @@ dir18 = '/eos/cms/store/group/phys_higgs/cmshww/amassiro/HWWNano/Summer20UL18_10
 #-------------------------------------------------------------------------------
 def load_dataset_vbf (max_entries = -1) :
 
-  _branches = [
-    "mjj",
-    "mll",
-    "ptll",
-    "detajj",
-    "dphill",
-    "PuppiMET_pt",
-    ]
+  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
 
   chain = ROOT.TChain('Events')
 
@@ -42,18 +35,11 @@ def load_dataset_vbf (max_entries = -1) :
 #-------------------------------------------------------------------------------
 def load_dataset_top (max_entries = -1) :
 
-  _branches = [
-    "mjj",
-    "mll",
-    "ptll",
-    "detajj",
-    "dphill",
-    "PuppiMET_pt",
-    ]
-
+  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
+  
   chain = ROOT.TChain('Events')
 
-  for i in range(0,10,1) : # Up to 10 (of 154)
+  for i in range(0,5,1) : # Up to 5 (of 154)
     chain.Add(dir18+'nanoLatino_TTTo2L2Nu__part' + str(i) + '.root')
   
   print chain.GetEntries()
@@ -72,14 +58,7 @@ def load_dataset_top (max_entries = -1) :
 #-------------------------------------------------------------------------------
 def load_dataset_ww (max_entries = -1) :
 
-  _branches = [
-    "mjj",
-    "mll",
-    "ptll",
-    "detajj",
-    "dphill",
-    "PuppiMET_pt",
-    ]
+  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
 
   chain = ROOT.TChain('Events')
   
@@ -102,17 +81,9 @@ def load_dataset_ww (max_entries = -1) :
 #-------------------------------------------------------------------------------
 def load_dataset_ggh (max_entries = -1) :
 
-  _branches = [
-    "mjj",
-    "mll",
-    "ptll",
-    "detajj",
-    "dphill",
-    "PuppiMET_pt",
-    ]
+  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
 
   chain = ROOT.TChain('Events')  
-
 
   for i in range(0,25,1) : # Up to 25
     chain.Add(dir18+'nanoLatino_GluGluHToWWTo2L2Nu_M125__part' + str(i) + '.root')

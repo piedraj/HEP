@@ -23,7 +23,8 @@ from sklearn.metrics import roc_curve, auc
 
 # Data load
 
-VARS = ['mjj', 'mll', 'ptll', 'detajj', 'dphill', 'PuppiMET_pt', 'Lepton_pt[0]', 'Lepton_pt[1]', 'CleanJet_pt[0]', 'CleanJet_pt[1]']
+VARS = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
+
 
 NDIM = len(VARS)+2
 
@@ -567,10 +568,9 @@ impact = plt.figure(3)
 
 
 
-VARS2 = ['mjj','mll','ptll','detajj', 'dphill', 'PuppiMET_pt', 'PuppiMET_phi', 'mTi', 'dphilljet', 'dphillmet', 'drll', 'dphilmet', 'mR','ht','Lepton_pt[0]', 'Lepton_pt[1]', 'Lepton_eta[0]', 'Lepton_eta[1]', 'CleanJet_pt[0]', 'CleanJet_pt[1]', 'CleanJet_eta[0]', 'CleanJet_eta[1]', 'mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])','mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])','mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])','mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])','log((abs(2*Lepton_eta[0]-CleanJet_eta[0]-CleanJet_eta[1])+abs(2*Lepton_eta[1]-CleanJet_eta[0]-CleanJet_eta[1]))/detajj)', 'jetqgl[0]','jetqgl[1]'] 
+VARS2 = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
 
 
-#VARS2 = ['mjj','mll','ptll','detajj', 'dphill', 'PuppiMET_pt', 'mTi', 'dphillmet', 'drll', 'mR', 'Lepton_pt[0]', 'Lepton_pt[1]', 'Lepton_eta[0]', 'Lepton_eta[1]', 'CleanJet_pt[0]', 'CleanJet_pt[1]', 'CleanJet_eta[0]', 'CleanJet_eta[1]','mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])','mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])','mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])','mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])', 'log((abs(2*Lepton_eta[0]-CleanJet_eta[0]-CleanJet_eta[1])+abs(2*Lepton_eta[1]-CleanJet_eta[0]-CleanJet_eta[1]))/detajj)', 'jetqgl[0]','jetqgl[1]']
 background = X_train_val[np.random.choice(X_train_val.shape[0], 500, replace=False)]
 explainer = shap.DeepExplainer(model,background)
 shap_values = explainer.shap_values(background)
