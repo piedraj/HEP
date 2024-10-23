@@ -49,6 +49,8 @@ Everytime you start a new session you need to follow these steps.
 
 Current output.
 
+![Car Image](keras_output.png)
+
 ```
 1771846
 1526781
