@@ -45,7 +45,7 @@ Everytime you start a new session you need to follow these steps.
 # 3. Run the DNN
 
     cd $CMSSW_BASE/src/DNN
-    python -b keras_test.py
+    python keras_test.py
 
 You should obtain the results below.
 
