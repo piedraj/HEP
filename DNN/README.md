@@ -2,6 +2,8 @@
 
 Deep neural network (DNN) that reads `v9` Monte Carlo files to separate the VBF, top, WW, and ggH processes.
 
+* [The Keras Sequential model](https://keras.io/guides/sequential_model/)
+
 # 1. Installation
 
 Log in to the CERN LXPLUS cluster.
