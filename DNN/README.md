@@ -47,44 +47,6 @@ Everytime you start a new session you need to follow these steps.
     cd $CMSSW_BASE/src/DNN
     python -b keras_test.py
 
-Current output.
+You should obtain the results below.
 
-![Car Image](keras_output.png)
-
-```
-1771846
-1526781
-1767596
-1424739
-_________________________________________________________________
-Layer (type)                 Output Shape              Param #
-=================================================================
-dense_1 (Dense)              (None, 240)               5280
-_________________________________________________________________
-dropout_1 (Dropout)          (None, 240)               0
-_________________________________________________________________
-dense_2 (Dense)              (None, 120)               28920
-_________________________________________________________________
-dropout_2 (Dropout)          (None, 120)               0
-_________________________________________________________________
-dense_3 (Dense)              (None, 60)                7260
-_________________________________________________________________
-dropout_3 (Dropout)          (None, 60)                0
-_________________________________________________________________
-dense_4 (Dense)              (None, 4)                 244
-=================================================================
-Total params: 41,704
-Trainable params: 41,704
-Non-trainable params: 0
-_________________________________________________________________
-Traceback (most recent call last):
-  File "keras_test.py", line 123, in <module>
-    validation_split=0.25)
-  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-Keras/2.2.4-pafccj2/lib/python2.7/site-packages/keras/engine/training.py", line 952, in fit
-    batch_size=batch_size)
-  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-Keras/2.2.4-pafccj2/lib/python2.7/site-packages/keras/engine/training.py", line 789, in _standardize_user_data
-    exception_prefix='target')
-  File "/cvmfs/cms.cern.ch/slc7_amd64_gcc700/external/py2-Keras/2.2.4-pafccj2/lib/python2.7/site-packages/keras/engine/training_utils.py", line 138, in standardize_input_data
-    str(data_shape))
-ValueError: Error when checking target: expected dense_4 to have shape (4,) but got array with shape (2,)
-```
+![Keras output screenshot](keras_output.png)
