@@ -1,5 +1,9 @@
 from __future__ import print_function
 from loader import *
+
+import matplotlib
+matplotlib.use('Agg')
+
 import ROOT 
 import numpy as np  
 import pandas as pd
@@ -21,12 +25,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_curve, auc
 
 
-# Data load
+VARS = [ "mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
 
-VARS = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]" ]
-
-
-NDIM = len(VARS)+2
+#NDIM = len(VARS)+2
+NDIM = len(VARS)
 
 dataset_vbf = load_dataset_vbf ( max_entries=-1 ) 
 dataset_top = load_dataset_top ( max_entries=-1 ) 
@@ -87,10 +89,8 @@ Y = dataset[:,NDIM:NDIM+4]
 X_train_val, X_test, Y_train_val, Y_test = train_test_split(X, Y, test_size=0.1, random_state=6)
 
 
-
-#KERAS#
-model = Sequential()
-
+# Keras
+#-------------------------------------------------------------------------------
 model = Sequential()
 
 model.add(Dense(240, kernel_initializer='glorot_normal', activation='relu', input_dim=NDIM))
@@ -580,4 +580,3 @@ shap.summary_plot(shap_values, VARS2, plot_type="bar")
 
 impact.show(3)
 '''
-input()
