@@ -47,6 +47,13 @@ Everytime you start a new session you need to follow these steps.
     cd $CMSSW_BASE/src/DNN
     python keras_test.py
 
-You should obtain the results below.
+The current version of `loader.py` reads the following number of events for each process.
+
+* 109900 **VBF** events.
+* 325433 **top** events.
+* 205146 **WW** events.
+* 103052 **ggH** events.
+
+When `keras_test.py` finishes running you should obtain the results below.
 
 ![Keras output screenshot](keras_output.png)
