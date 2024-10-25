@@ -112,6 +112,8 @@ Both data and Monte Carlo (MC) files have the event variables stored in a ROOT `
     Events->MakeClass("TreeContent")
     .q
 
+    emacs -nw TreeContent.h
+
 # 7. Share on the web
 
 Once the analysis plots have been produced, the best way to look at them is by [creating a webEOS site](https://webeos.docs.cern.ch/create_site/).
