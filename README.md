@@ -44,7 +44,7 @@ Now you can proceed with the installation.
 
 Get the analysis configuration.
 
-    git clone https://github.com/piedraj/TFG
+    git clone https://github.com/piedraj/HEP
 
 # 2. Always do
 
@@ -57,8 +57,8 @@ Everytime you start a new session you need to follow these steps.
 
 Currently the analysis can be performed on `v7` or `v9` samples. To choose one set simply go to the corresponding folder.
     
-    cd TFG/Full2018_v7/
-    cd TFG/Full2018_v9/
+    cd HEP/Full2018_v7/
+    cd HEP/Full2018_v9/
 
 <!---
 *Only necessary if Grid access is needed.* Produce a valid VOMS proxy.
