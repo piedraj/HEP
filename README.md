@@ -108,3 +108,12 @@ When running on batch check that you have produced these [v7](https://piedra.web
 
 Once the analysis plots have been produced, the best way to look at them is by [creating a webEOS site](https://webeos.docs.cern.ch/create_site/).
 
+# 7. How to know the Events tree content
+
+Both data and Monte Carlo (MC) files have the different event variables stored in a ROOT `TTree` object named `Events`. Here you can find an easy way to find the names of all those variables.
+
+    root -l /eos/cms/store/group/phys_higgs/cmshww/amassiro/HWWNano/Summer20UL18_106x_nAODv9_Full2018v9/MCl1loose2018v9__MCCorr2018v9NoJERInHorn__l2tightOR2018v9/nanoLatino_TTJets__part52.root
+    Events->MakeClass("TreeContent")
+    .q
+
+Now you just need to open the file `TreeContent.h` to see all the variables stored in the `Events` tree.
