@@ -104,14 +104,14 @@ If needed, the available arguments can be printed.
 
 When running on batch check that you have produced these [v7](https://piedra.web.cern.ch/plots-v7/) or [v9](https://piedra.web.cern.ch/plots-v9/) default distributions.
 
-# 6. Share on the web
-
-Once the analysis plots have been produced, the best way to look at them is by [creating a webEOS site](https://webeos.docs.cern.ch/create_site/).
-
-# 7. How to know the Events tree content
+# 6. How to know the Events tree content
 
 Both data and Monte Carlo (MC) files have the event variables stored in a ROOT `TTree` object named `Events`. Once you have followed the instructions below, you just need to open the file `TreeContent.h` to see all the variables stored in the `Events` tree.
 
     root -l /eos/cms/store/group/phys_higgs/cmshww/amassiro/HWWNano/Summer20UL18_106x_nAODv9_Full2018v9/MCl1loose2018v9__MCCorr2018v9NoJERInHorn__l2tightOR2018v9/nanoLatino_TTJets__part52.root
     Events->MakeClass("TreeContent")
     .q
+
+# 7. Share on the web
+
+Once the analysis plots have been produced, the best way to look at them is by [creating a webEOS site](https://webeos.docs.cern.ch/create_site/).
