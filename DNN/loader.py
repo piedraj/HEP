@@ -12,7 +12,33 @@ dir18 = '/eos/cms/store/group/phys_higgs/cmshww/amassiro/HWWNano/Summer20UL18_10
 #-------------------------------------------------------------------------------
 def load_dataset_vbf (max_entries = -1) :
 
-  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
+  _branches = [
+    "mll",
+    "ptll",
+    "dphill",
+    "drll",
+    "mjj",
+    "detajj",
+    "dphillmet",
+    "mth",
+    "mTi",
+    "ht",
+    "PuppiMET_pt",
+    "Lepton_pt[0]",
+    "Lepton_pt[1]",
+    "Lepton_eta[0]",
+    "Lepton_eta[1]",
+    "CleanJet_pt[0]",
+    "CleanJet_pt[1]",
+    "CleanJet_eta[0]",
+    "CleanJet_eta[1]",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])"
+  ]
+
+  ROOT.gROOT.ProcessLineSync(".L mlj.C+")
 
   chain = ROOT.TChain('Events')
 
@@ -35,7 +61,33 @@ def load_dataset_vbf (max_entries = -1) :
 #-------------------------------------------------------------------------------
 def load_dataset_top (max_entries = -1) :
 
-  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
+  _branches = [
+    "mll",
+    "ptll",
+    "dphill",
+    "drll",
+    "mjj",
+    "detajj",
+    "dphillmet",
+    "mth",
+    "mTi",
+    "ht",
+    "PuppiMET_pt",
+    "Lepton_pt[0]",
+    "Lepton_pt[1]",
+    "Lepton_eta[0]",
+    "Lepton_eta[1]",
+    "CleanJet_pt[0]",
+    "CleanJet_pt[1]",
+    "CleanJet_eta[0]",
+    "CleanJet_eta[1]",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])"
+  ]
+
+  ROOT.gROOT.ProcessLineSync(".L mlj.C+")
   
   chain = ROOT.TChain('Events')
 
@@ -58,7 +110,33 @@ def load_dataset_top (max_entries = -1) :
 #-------------------------------------------------------------------------------
 def load_dataset_ww (max_entries = -1) :
 
-  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
+  _branches = [
+    "mll",
+    "ptll",
+    "dphill",
+    "drll",
+    "mjj",
+    "detajj",
+    "dphillmet",
+    "mth",
+    "mTi",
+    "ht",
+    "PuppiMET_pt",
+    "Lepton_pt[0]",
+    "Lepton_pt[1]",
+    "Lepton_eta[0]",
+    "Lepton_eta[1]",
+    "CleanJet_pt[0]",
+    "CleanJet_pt[1]",
+    "CleanJet_eta[0]",
+    "CleanJet_eta[1]",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])"
+  ]
+
+  ROOT.gROOT.ProcessLineSync(".L mlj.C+")
 
   chain = ROOT.TChain('Events')
   
@@ -81,7 +159,33 @@ def load_dataset_ww (max_entries = -1) :
 #-------------------------------------------------------------------------------
 def load_dataset_ggh (max_entries = -1) :
 
-  _branches = ["mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
+  _branches = [
+    "mll",
+    "ptll",
+    "dphill",
+    "drll",
+    "mjj",
+    "detajj",
+    "dphillmet",
+    "mth",
+    "mTi",
+    "ht",
+    "PuppiMET_pt",
+    "Lepton_pt[0]",
+    "Lepton_pt[1]",
+    "Lepton_eta[0]",
+    "Lepton_eta[1]",
+    "CleanJet_pt[0]",
+    "CleanJet_pt[1]",
+    "CleanJet_eta[0]",
+    "CleanJet_eta[1]",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])"
+  ]
+
+  ROOT.gROOT.ProcessLineSync(".L mlj.C+")
 
   chain = ROOT.TChain('Events')  
 

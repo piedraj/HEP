@@ -25,7 +25,31 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_curve, auc
 
 
-VARS = [ "mjj", "mll", "ptll", "detajj", "dphill", "PuppiMET_pt", "mTi", "dphillmet", "drll", "ht", "mth", "Lepton_pt[0]", "Lepton_pt[1]", "Lepton_eta[0]", "Lepton_eta[1]", "CleanJet_pt[0]", "CleanJet_pt[1]", "CleanJet_eta[0]", "CleanJet_eta[1]"]
+VARS = [
+    "mll",
+    "ptll",
+    "dphill",
+    "drll",
+    "mjj",
+    "detajj",
+    "dphillmet",
+    "mth",
+    "mTi",
+    "ht",
+    "PuppiMET_pt",
+    "Lepton_pt[0]",
+    "Lepton_pt[1]",
+    "Lepton_eta[0]",
+    "Lepton_eta[1]",
+    "CleanJet_pt[0]",
+    "CleanJet_pt[1]",
+    "CleanJet_eta[0]",
+    "CleanJet_eta[1]",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[0], Lepton_eta[0], Lepton_phi[0], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[0], CleanJet_eta[0], CleanJet_phi[0])",
+    "mlj(Lepton_pt[1], Lepton_eta[1], Lepton_phi[1], CleanJet_pt[1], CleanJet_eta[1], CleanJet_phi[1])"
+]
 
 NDIM = len(VARS)
 
