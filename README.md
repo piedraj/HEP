@@ -106,7 +106,7 @@ When running on batch check that you have produced these [v7](https://piedra.web
 
 # 6. How to know the Events tree content
 
-Both data and Monte Carlo (MC) files have the event variables stored in a ROOT `TTree` object named `Events`. Once you have followed the instructions below, you just need to open the file `TreeContent.h` to see all the variables stored in the `Events` tree.
+Both data and Monte Carlo (MC) files have the event variables stored in a ROOT `TTree` object named `Events`. Once you have followed the instructions below, you just need to open the file `TreeContent.h` to see all the variables.
 
     root -l /eos/cms/store/group/phys_higgs/cmshww/amassiro/HWWNano/Summer20UL18_106x_nAODv9_Full2018v9/MCl1loose2018v9__MCCorr2018v9NoJERInHorn__l2tightOR2018v9/nanoLatino_TTJets__part52.root
     Events->MakeClass("TreeContent")
