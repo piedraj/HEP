@@ -104,7 +104,7 @@ If needed, the available arguments can be printed.
 
 When running on batch check that you have produced these [v7](https://piedra.web.cern.ch/plots-v7/) or [v9](https://piedra.web.cern.ch/plots-v9/) default distributions.
 
-# 6. How to know the Events tree content
+# 6. How to know a tree content
 
 Both data and Monte Carlo (MC) files have the event variables stored in a ROOT `TTree` object named `Events`. Once you have followed the instructions below, you just need to open the file `TreeContent.h` to see all the variables.
 
