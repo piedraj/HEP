@@ -7,7 +7,7 @@
 * [PyRoot tutorials](https://root.cern.ch/doc/master/group__tutorial__pyroot.html)
 * [SWAN](https://swan.cern.ch/)
 * [Monte Carlo particle numbering scheme](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-monte-carlo-numbering.pdf)
-* [The Review of Particle Physics](https://pdg.lbl.gov/index.html)
+* [The Review of Particle Physics (PDG)](https://pdg.lbl.gov/index.html)
 
 # 1. Installation
 
