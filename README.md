@@ -4,7 +4,7 @@
 * [ROOT RDataFrame class reference](https://root.cern/doc/master/classROOT_1_1RDataFrame.html)
 * [HTCondor batch system](https://twiki.cern.ch/twiki/bin/view/ABPComputing/LxbatchHTCondor)
 * [Condor commands](https://twiki.cern.ch/twiki/bin/view/CENF/NeutrinoClusterCondorDoc)
-* [PyROOT tutorials](https://root.cern.ch/doc/master/group__tutorial__pyroot.html)
+* [PyRoot tutorials](https://root.cern.ch/doc/master/group__tutorial__pyroot.html)
 * [SWAN](https://swan.cern.ch/)
 * [Monte Carlo particle numbering scheme](https://pdg.lbl.gov/2020/reviews/rpp2020-rev-monte-carlo-numbering.pdf)
 * [The Review of Particle Physics](https://pdg.lbl.gov/index.html)
